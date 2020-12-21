@@ -14,3 +14,16 @@ table(datos$Country)
 table(datos$Mobile.Brand.Name)
 
 cor(datos$Event.Count, datos$Unique.Users)
+
+library(ggplot2)
+ggplot(datos, aes(x = Event.Name, y = Event.Count, fill=Event.Name)) + 
+  geom_boxplot() + coord_flip()
+
+
+ggplot(datos, aes(x = Mobile.Brand.Name, y = Event.Count, fill=Event.Name)) + 
+  geom_boxplot() + coord_flip()
+
+ggplot(datos, aes(x = Country, y = Event.Count, fill=Event.Name)) + 
+  geom_boxplot() + coord_flip()
+
+#Lamentablemente los gráficos no aportan mucho como información
