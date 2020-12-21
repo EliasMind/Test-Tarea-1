@@ -13,3 +13,4 @@ table(datos$Event.Name)
 table(datos$Country)
 table(datos$Mobile.Brand.Name)
 
+cor(datos$Event.Count, datos$Unique.Users)
